@@ -9,6 +9,9 @@ const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
 
+const { readFileSync } = require("fs");
+var path = require("path");
+let cer_part = path.join(process.cwd(), 'isrgrootx1(1).pem');
 // Middleware
 app.use(cors()); 
 app.use(bodyParser.urlencoded({ extended: false }));
